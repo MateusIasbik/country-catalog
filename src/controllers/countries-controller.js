@@ -21,10 +21,6 @@ async function searchByName(req, res, next) {
 }
 
 async function reviewCountry(req, res, next) {
-    if (!req.body || !req.body.country || typeof req.body.liked !== 'boolean') {
-        return res.sendStatus(httpStatus.BAD_REQUEST);
-    }
-
     try {
         const { country, liked } = req.body;
         const result = await countriesService.reviewCountry(country, liked);

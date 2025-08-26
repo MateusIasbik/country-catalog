@@ -1,10 +1,6 @@
-import joi from "joi";
-import { AssetsDataWithoutId } from "../protocols";
+import Joi from 'joi';
 
-export const countriesSchema = joi.object<AssetsDataWithoutId>({
-    name: joi.string().required(),
-    price: joi.number().positive().required(),
-    amount: joi.number().min(0).required(),
-    currentValue: joi.number().positive().required(),
-    acquisitionValue: joi.number().positive().required(),
-  });
+export const ratingSchema = Joi.object({
+  country: Joi.string().required(),
+  liked: Joi.boolean().required(),
+});
