@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { countriesRepository } from '../repositories/countries-repository.js';
 
-const API_URL = 'http://restcountries.com/v3.1';
+const API_URL = 'https://restcountries.com/v3.1';
 
 async function listTop10() {
-    const { data } = await axios.get(`${API_URL}/all`);
+    const { data } = await axios.get(`${API_URL}/all?fields=name,population,continents`);
 
     const top10 = data.map(country => ({
         name: country.name.common,

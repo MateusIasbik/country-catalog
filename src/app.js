@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import countriesRoutes from './src/routes/countries-route.js';
-import errorHandler from './src/middlewares/error.js';
+import countriesRoutes from './routes/countries-route.js';
+import errorHandler from './middlewares/error.js';
 
 dotenv.config();
 
