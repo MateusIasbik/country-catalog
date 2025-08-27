@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { countriesController } from '../controllers/countries-controller.js';
-import { validateSchema } from '../schemas/schema-middleware.js';
+import { validateSchema } from '../middlewares/schema-middleware.js';
 import { ratingSchema } from '../schemas/countries-schema.js';
 
 const countriesRoutes = Router();
